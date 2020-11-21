@@ -1,0 +1,7 @@
+export const ADD_TESTIMONIAL = "addTestimonial"
+export const GET_ALL_TESTIMONIALS = "getAllTestimonials"
+export const GET_TESTIMONIALS = "getTestimonial"
+export const UPDATE_TESTIMONIAL = "updateTestimonial"
+export const DELETE_TESTIMONIAL = "deleteTestimonial"
+export const LIKE_TESTIMONIAL = "likeTestimonial"
+export const DISLIKE_TESTIMONIAL = "dislikeTestimonial"
