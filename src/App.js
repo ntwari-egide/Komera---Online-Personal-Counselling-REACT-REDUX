@@ -1,9 +1,10 @@
 import './App.css';
-import * as TestimonialActions from "./actions/testimonialActions"
+import TestimonialComponentHandler from "./components/TestimonialComponentHandler";
+
 function App() {
   return (
     <div className="App">
-
+        <TestimonialComponentHandler />
     </div>
   );
 }

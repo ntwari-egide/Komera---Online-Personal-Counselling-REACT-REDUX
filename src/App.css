@@ -1,5 +1,7 @@
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 .App {
-  text-align: center;
+  font-family: QuickSand;
 }
 
 .App-logo {
@@ -28,11 +30,33 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.testimonies {
+
+}
+
+.testimonies div div {
+  border: none;
+  box-shadow: 0 0 2px #00000080;
+  margin-left: 84px;
+  border-radius: 2px;
+  padding: 20px;
+  margin-top: 39px;
+}
+
+.testimonies div div h4, .testimonies h2,.testimonies h4{
+  text-align: center;
+}
+.testimonies .testimony-title{
+    font-weight: bold;
+    color: #164e88;
+ }
+
+.testimonies .testimony-body{
+  font-weight: 500;
+  text-align: justify;
+}
+
+.testimonies .testimony-by{
+  color: #d00243;
+  font-weight: bold;
 }
