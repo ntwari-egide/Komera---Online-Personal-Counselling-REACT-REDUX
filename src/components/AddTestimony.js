@@ -28,7 +28,8 @@ class AddTestimony extends Component{
 
     submitForm(e){
         // testimonialsStore.dispatch(testimonialAction.addTestimonial(this.state))
-        this.props.addTestimony();
+        console.log("added",this.state)
+        this.props.addTestimony(this.state);
         e.preventDefault()
     }
 
@@ -57,6 +58,7 @@ class AddTestimony extends Component{
                         <div className="form-group">
                             <label htmlFor="exampleFormControlSelect1">Example select</label>
                             <select value={this.state.testimonialType} name="testimonialType" onChange={this.changeStateValue} className="form-control" id="exampleFormControlSelect1">
+                                <option value="">choose type</option>
                                 <option value="illness">illness</option>
                                 <option value="admissions">admissions</option>
                                 <option value="gender harassment">gender harassment</option>
@@ -86,7 +88,7 @@ const mapStateToProps = state => {
 // It lets you provide action dispatching functions as props
 const mapDispatch = (dispatch) => {
     return {
-        addTestimony : () => dispatch(testimonialAction.addTestimonial())
+        addTestimony : (testimonialBody) => dispatch(testimonialAction.addTestimonial(testimonialBody))
     }
 }
 

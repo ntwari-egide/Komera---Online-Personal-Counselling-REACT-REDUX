@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e037829b-3731-405c-8eaa-4185fd2e092f" name="Default Changelist" comment="">
+    <list default="true" id="e037829b-3731-405c-8eaa-4185fd2e092f" name="Default Changelist" comment="Fit solved the issue 'Error: Could not find &quot;store&quot; in the context of &quot;Connect(AddTestimony)&quot;. Either wrap the root component in a &lt;Provider&gt;'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AddTestimony.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddTestimony.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,22 +51,26 @@
       <workItem from="1606058717487" duration="547000" />
       <workItem from="1606059308127" duration="99000" />
       <workItem from="1606059426654" duration="2066000" />
-      <workItem from="1606064384818" duration="6383000" />
+      <workItem from="1606064384818" duration="7354000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fit solved the issue 'Error: Could not find &quot;store&quot; in the context of &quot;Connect(AddTestimony)&quot;. Either wrap the root component in a &lt;Provider&gt;'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fit solved the issue 'Error: Could not find &quot;store&quot; in the context of &quot;Connect(AddTestimony)&quot;. Either wrap the root component in a &lt;Provider&gt;'" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="137" y="14" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605957179129">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="14" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1605957179129" />
-    <state x="166" y="0" key="CommitChangelistDialog2" timestamp="1606072975312">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1606073392631">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="166" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1606072975312" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1606073392631" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1605973230218">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
