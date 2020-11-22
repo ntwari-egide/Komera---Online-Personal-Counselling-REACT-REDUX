@@ -1,8 +1,23 @@
 import * as actions from "../actions/actionTypes"
 let lastId = 0;
 
-export default function testimonialReducer(state = [],action){
+let initialState  = [
+    {
+        OwnerFullName: "ntwari egide",
+        OwnerId: 1,
+        testimonialType: "illiness",
+        testimonialTitle: "23 Years On Bed",
+        testimonialBody: "Jamaica Hospital Medical Center regularly receives letters of thanks from former patients or their family members for the high level of care we provide throughout our facility.",
+        views: 1,
+        likes: 0,
+        dislikes: 0
+    }
+]
+
+export default function testimonialReducer(state = initialState,action){
     switch (action.type){
+        case actions.RESET_TESTIMONIAL_STORAGE:
+            return action.payload
         case actions.ADD_TESTIMONIAL:
             return [
                 ...state,

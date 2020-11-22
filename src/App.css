@@ -60,3 +60,16 @@
   color: #d00243;
   font-weight: bold;
 }
+
+.card{
+  width: 50%;
+  border: none;
+  box-shadow: 0 0 3px #0000006e;
+  padding: 29px;
+  text-align: left;
+  position: relative;
+  left: 277px;
+  top: 61px;
+  border-radius: 3px;
+  margin-bottom: 140px;
+}
