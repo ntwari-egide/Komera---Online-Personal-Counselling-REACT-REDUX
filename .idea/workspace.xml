@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e037829b-3731-405c-8eaa-4185fd2e092f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AddTestimony.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListOfTestimonials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListOfTestimonials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TestimonialComponentHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TestimonialComponentHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/testimonialReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/testimonialReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddTestimony.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddTestimony.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +52,7 @@
       <workItem from="1606058717487" duration="547000" />
       <workItem from="1606059308127" duration="99000" />
       <workItem from="1606059426654" duration="2066000" />
-      <workItem from="1606064384818" duration="4667000" />
+      <workItem from="1606064384818" duration="6383000" />
     </task>
     <servers />
   </component>
@@ -71,6 +64,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="14" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1605957179129" />
+    <state x="166" y="0" key="CommitChangelistDialog2" timestamp="1606072975312">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="166" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1606072975312" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1605973230218">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

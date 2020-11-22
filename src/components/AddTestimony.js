@@ -1,7 +1,6 @@
 import React,{Component,useContext} from "react"
 import testimonialsStore from "../store/testimonialStore";
 import * as testimonialAction from "../actions/testimonialActions"
-import mapDispatchToProps from "react-redux/lib/connect/mapDispatchToProps";
 import {connect} from "react-redux";
 
 const Context = React.createContext()
@@ -28,7 +27,8 @@ class AddTestimony extends Component{
     }
 
     submitForm(e){
-        testimonialsStore.dispatch(testimonialAction.addTestimonial(this.state))
+        // testimonialsStore.dispatch(testimonialAction.addTestimonial(this.state))
+        this.props.addTestimony();
         e.preventDefault()
     }
 
@@ -76,7 +76,7 @@ class AddTestimony extends Component{
 //mapStateToProps is used for selecting the part of the data from the store that the connected component needs
 //It is called every time the store state changes.
 //It receives the entire store state, and should return an object of data this component needs.
-const mapState = state => {
+const mapStateToProps = state => {
     return {
         ...state
     }
@@ -86,7 +86,7 @@ const mapState = state => {
 // It lets you provide action dispatching functions as props
 const mapDispatch = (dispatch) => {
     return {
-        addTestimony : () => dispatch(testimonialAction.addTestimonial(this.state))
+        addTestimony : () => dispatch(testimonialAction.addTestimonial())
     }
 }
 
@@ -95,6 +95,6 @@ const mapDispatch = (dispatch) => {
 //It provides its connected component with the pieces of the data it needs from the store, and the functions it can use to dispatch actions to the store.
 
 export default connect(
-    mapState
+    mapStateToProps
     ,mapDispatch
 ) (AddTestimony)

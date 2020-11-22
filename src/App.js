@@ -1,11 +1,13 @@
 import './App.css';
 import TestimonialComponentHandler from "./components/TestimonialComponentHandler";
+import {Provider} from "react-redux";
+import testimonialsStore from "./store/testimonialStore";
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={testimonialsStore} className="App">
         <TestimonialComponentHandler />
-    </div>
+    </Provider>
   );
 }
 
