@@ -6,7 +6,7 @@ class EditTestimonial extends Component{
     constructor(props) {
         super(props);
 
-        this.state ={props}
+        this.state = props.location.state
         this.changeStateValue = this.changeStateValue.bind(this)
         this.submitForm = this.submitForm.bind(this)
     }
@@ -18,9 +18,7 @@ class EditTestimonial extends Component{
     }
 
     submitForm(e){
-        console.log("added",this.state)
-        // this.props.addTestimony(this.state);
-        console.log(this.props)
+        this.props.updateTestimony(this.state);
         e.preventDefault()
     }
     render() {
@@ -56,7 +54,7 @@ class EditTestimonial extends Component{
                     </div>
                 </form>
 
-                <input type="submit" value="Post Testimony" onClick={this.submitForm} />
+                <input type="submit" value="Update Testimony" onClick={this.submitForm} />
             </div>
         )
     }

@@ -4,6 +4,7 @@ import testimonialReducer from "../reducers/testimonialReducer";
 import * as actions from "../actions/actionTypes"
 import * as testimonialActions from "../actions/testimonialActions"
 import {Redirect} from "react-router";
+import {Link} from "react-router-dom";
 import EditTestimonial from "./EditTestimonial";
 
 
@@ -86,7 +87,7 @@ function ListingTestimonials({testimonials}) {
 
 function GoEditComponent(){
     console.log('clicked edit')
-    // return <Redirect push to="/edit-testimony" />
+    return <Link to="/edit-testimony" />
 }
 
 function Testimonial({...testimonial}){
@@ -104,7 +105,7 @@ function Testimonial({...testimonial}){
             <button type="button" className="btn btn-outline-primary" onClick={()=> dispatch({type: actions.LIKE_TESTIMONIAL,payload: {id: testimonial.id,OwnerId: testimonial.OwnerId}})}>like</button>
             <button type="button" className="btn btn-outline-primary" onClick={()=> dispatch({type: actions.DISLIKE_TESTIMONIAL,payload: {id: testimonial.id,OwnerId: testimonial.OwnerId}})}>dislike</button>
             <br/><br/><br/>
-            <button type="button" className="btn btn-primary" onClick={GoEditComponent}>Edit</button>
+            <Link className="btn btn-info" to={{pathname: "/edit-testimony",state: testimonial}} >Edit</Link>
             <button type="button" className="btn btn-danger" onClick={() => dispatch({type: actions.DELETE_TESTIMONIAL,payload: {id: testimonial.id}})}>Delete</button>
         </div>
     )
