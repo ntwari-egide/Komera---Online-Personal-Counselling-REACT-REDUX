@@ -19,7 +19,6 @@ class EditTestimonial extends Component{
 
     submitForm(e){
         this.props.updateTestimony(this.state);
-        e.preventDefault()
     }
     render() {
         return (
