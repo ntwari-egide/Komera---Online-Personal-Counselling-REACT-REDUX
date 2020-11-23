@@ -3,7 +3,8 @@ import testimonialsStore from "../store/testimonialStore";
 import testimonialReducer from "../reducers/testimonialReducer";
 import * as actions from "../actions/actionTypes"
 import * as testimonialActions from "../actions/testimonialActions"
-import {useHistory} from "react-router";
+import {Redirect} from "react-router";
+import EditTestimonial from "./EditTestimonial";
 
 
 const Context = React.createContext();
@@ -83,6 +84,11 @@ function ListingTestimonials({testimonials}) {
         )
 }
 
+function GoEditComponent(){
+    console.log('clicked edit')
+    // return <Redirect push to="/edit-testimony" />
+}
+
 function Testimonial({...testimonial}){
     // console.log(testimonial)
     const dispatch =  useContext(Context)
@@ -98,7 +104,7 @@ function Testimonial({...testimonial}){
             <button type="button" className="btn btn-outline-primary" onClick={()=> dispatch({type: actions.LIKE_TESTIMONIAL,payload: {id: testimonial.id,OwnerId: testimonial.OwnerId}})}>like</button>
             <button type="button" className="btn btn-outline-primary" onClick={()=> dispatch({type: actions.DISLIKE_TESTIMONIAL,payload: {id: testimonial.id,OwnerId: testimonial.OwnerId}})}>dislike</button>
             <br/><br/><br/>
-            <button type="button" className="btn btn-primary">Edit</button>
+            <button type="button" className="btn btn-primary" onClick={GoEditComponent}>Edit</button>
             <button type="button" className="btn btn-danger" onClick={() => dispatch({type: actions.DELETE_TESTIMONIAL,payload: {id: testimonial.id}})}>Delete</button>
         </div>
     )
