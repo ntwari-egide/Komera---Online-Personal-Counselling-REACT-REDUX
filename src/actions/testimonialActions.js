@@ -1,5 +1,13 @@
 import * as actions from "./actionTypes";
 
+const addViewOnTestimonials = () => {
+    console.log("add view is called from rendering")
+    return {
+        type: actions.TESTIMONIAL_VIEWS
+    }
+}
+
+
 export const addTestimonial = (addTestimonialPayload) => {
     return {
         type: actions.ADD_TESTIMONIAL,
@@ -8,6 +16,7 @@ export const addTestimonial = (addTestimonialPayload) => {
 }
 
 export const getAllTestimonials = () => {
+    addViewOnTestimonials()
     return {
         type: actions.GET_ALL_TESTIMONIALS
     }

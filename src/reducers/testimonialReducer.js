@@ -22,7 +22,7 @@ export default function testimonialReducer(state = initialState,action){
             return [
                 ...state,
                 {
-                    id: lastId + 1,
+                    id: Math.floor((Math.random() * 1000) + 1),
                     date: Date.now(),
                     OwnerFullName: action.payload.OwnerFullName,
                     OwnerId: action.payload.OwnerId,
@@ -36,7 +36,20 @@ export default function testimonialReducer(state = initialState,action){
             ]
             break
         case actions.GET_ALL_TESTIMONIALS:
-            return state
+            return state.map(testimonials => {
+                return {
+                    id: testimonials.id,
+                    date: testimonials.date,
+                    OwnerFullName: testimonials.OwnerFullName,
+                    OwnerId: testimonials.OwnerId,
+                    testimonialType: testimonials.testimonialType,
+                    testimonialTitle: testimonials.testimonialTitle,
+                    testimonialBody: testimonials.testimonialBody,
+                    views: testimonials.views + 1,
+                    likes: testimonials.likes,
+                    dislikes: testimonials.dislikes
+                }
+            })
             break
         case actions.GET_TESTIMONIALS:
             return state.filter(testimonial => testimonial.id === action.payload.id)
@@ -80,13 +93,47 @@ export default function testimonialReducer(state = initialState,action){
                         dislikes: testimonials.dislikes
                     }
                 }
-                return  state
+                return  testimonials
             })
             break;
 
         case actions.DISLIKE_TESTIMONIAL:
             return state.map(testimonials => {
                 if(testimonials.id === action.payload.id && testimonials.OwnerId === action.payload.OwnerId){
+                    if(testimonials.likes > 0){
+                        return {
+                            id: testimonials.id,
+                            date: testimonials.date,
+                            OwnerFullName: testimonials.OwnerFullName,
+                            OwnerId: testimonials.OwnerId,
+                            testimonialType: testimonials.testimonialType,
+                            testimonialTitle: testimonials.testimonialTitle,
+                            testimonialBody: testimonials.testimonialBody,
+                            views: testimonials.views,
+                            likes: testimonials.likes - 1,
+                            dislikes: testimonials.dislikes + 1
+                        }
+                    }
+                    else{
+                        return {
+                            id: testimonials.id,
+                            date: testimonials.date,
+                            OwnerFullName: testimonials.OwnerFullName,
+                            OwnerId: testimonials.OwnerId,
+                            testimonialType: testimonials.testimonialType,
+                            testimonialTitle: testimonials.testimonialTitle,
+                            testimonialBody: testimonials.testimonialBody,
+                            views: testimonials.views,
+                            likes: 0,
+                            dislikes: testimonials.dislikes + 1
+                        }
+                    }
+                }
+                return  testimonials
+            })
+            break
+        case actions.TESTIMONIAL_VIEWS:
+            return state.map(testimonials => {
                     return {
                         id: testimonials.id,
                         date: testimonials.date,
@@ -95,14 +142,11 @@ export default function testimonialReducer(state = initialState,action){
                         testimonialType: testimonials.testimonialType,
                         testimonialTitle: testimonials.testimonialTitle,
                         testimonialBody: testimonials.testimonialBody,
-                        views: testimonials.views,
-                        likes: testimonials.likes - 1,
-                        dislikes: testimonials.dislikes + 1
+                        views: testimonials.views + 1,
+                        likes: testimonials.likes,
+                        dislikes: testimonials.dislikes
                     }
-                }
-                return  state
-            })
-            break
+                })
 
         default:
             return state

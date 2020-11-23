@@ -30,6 +30,7 @@ class AddTestimony extends Component{
         // testimonialsStore.dispatch(testimonialAction.addTestimonial(this.state))
         console.log("added",this.state)
         this.props.addTestimony(this.state);
+        console.log(this.props)
         e.preventDefault()
     }
 

@@ -3,6 +3,7 @@ import testimonialsStore from "../store/testimonialStore";
 import testimonialReducer from "../reducers/testimonialReducer";
 import * as actions from "../actions/actionTypes"
 import * as testimonialActions from "../actions/testimonialActions"
+import {useHistory} from "react-router";
 
 
 const Context = React.createContext();
@@ -30,6 +31,9 @@ function ListOfTestimonials () {
             dispatch({
                 type: actions.RESET_TESTIMONIAL_STORAGE,
                 payload: JSON.parse(dataFromLocalStorage)
+            })
+            dispatch({
+                type: actions.TESTIMONIAL_VIEWS
             })
 
             didRun.current = true
@@ -81,15 +85,21 @@ function ListingTestimonials({testimonials}) {
 
 function Testimonial({...testimonial}){
     // console.log(testimonial)
+    const dispatch =  useContext(Context)
     return (
         <div className="col-sm-3">
             <span className="glyphicon glyphicon-off"></span>
             <h4>{testimonial.testimonialTitle}</h4>
             <p className="testimony-body">{testimonial.testimonialBody}</p>
             <p className="testimony-title">Type: {testimonial.testimonialType}</p>
-            <p className="testimony-by">By : {testimonial.OwnerFullName}</p>
+            <p className="testimony-by text-info">By : {testimonial.OwnerFullName}</p>
             <p className="text-success font-weight-bold">{testimonial.views} views</p>
             <p><span className="text-success align-left">{testimonial.likes} likes </span> <span className="text-danger align-right">{testimonial.dislikes} dislikes</span></p>
+            <button type="button" className="btn btn-outline-primary" onClick={()=> dispatch({type: actions.LIKE_TESTIMONIAL,payload: {id: testimonial.id,OwnerId: testimonial.OwnerId}})}>like</button>
+            <button type="button" className="btn btn-outline-primary" onClick={()=> dispatch({type: actions.DISLIKE_TESTIMONIAL,payload: {id: testimonial.id,OwnerId: testimonial.OwnerId}})}>dislike</button>
+            <br/><br/><br/>
+            <button type="button" className="btn btn-primary">Edit</button>
+            <button type="button" className="btn btn-danger" onClick={() => dispatch({type: actions.DELETE_TESTIMONIAL,payload: {id: testimonial.id}})}>Delete</button>
         </div>
     )
 }
