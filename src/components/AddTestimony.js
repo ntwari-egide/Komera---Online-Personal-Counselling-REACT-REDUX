@@ -1,10 +1,13 @@
 import React,{useState} from "react"
 import {useDispatch} from "react-redux";
 import * as testimonialActions from "../actions/testimonialActions"
+import {useHistory} from "react-router-dom";
 
 const Context = React.createContext()
 
 function AddTestimony(){
+
+        let history  = useHistory()
 
         const dispatch = useDispatch()
 
@@ -24,6 +27,8 @@ function AddTestimony(){
 
     const submitForm = (e) =>{
         dispatch(testimonialActions.addTestimonial(state))
+        alert("You added new testimony ")
+        history.push("/")
         e.preventDefault()
     }
 

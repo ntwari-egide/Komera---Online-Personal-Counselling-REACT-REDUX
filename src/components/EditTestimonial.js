@@ -1,8 +1,11 @@
 import React,{useState} from "react"
 import * as testimonialActions from "../actions/testimonialActions"
 import {useDispatch} from "react-redux";
+import {useHistory} from "react-router-dom";
 
 function EditTestimonial(props){
+
+    let history  = useHistory();
 
     const dispatch = useDispatch()
 
@@ -11,7 +14,7 @@ function EditTestimonial(props){
         OwnerFullName: props.location.state.OwnerFullName,
         testimonialType: props.location.state.testimonialType,
         testimonialTitle: props.location.state.testimonialTitle,
-        testimonialBody: props.location.state.testimonialBody,
+        testimonialBody: props.location.state.testimonialBody
     })
 
     const changeStateValue = (e) =>{
@@ -21,9 +24,20 @@ function EditTestimonial(props){
         })
     }
 
+    const resetForm= () => {
+        setTestimonialState({
+            id: props.location.state.id,
+            OwnerFullName: props.location.state.OwnerFullName,
+            testimonialType: props.location.state.testimonialType,
+            testimonialTitle: props.location.state.testimonialTitle,
+            testimonialBody: props.location.state.testimonialBody
+        })
+    }
+
     const submitForm = (e) => {
         dispatch(testimonialActions.updateTestimonial(testimonialState))
-        console.log(testimonialState)
+        alert("You have updated the testimony : ",testimonialState.id)
+        history.push("/")
         e.preventDefault()
     }
 
@@ -59,6 +73,7 @@ function EditTestimonial(props){
                 </div>
             </form>
 
+            <input type="reset" value="reset form" onClick={resetForm}/>
             <input type="submit" value="Update Testimony" onClick={submitForm} />
         </div>
     )

@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AddTestimony.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddTestimony.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EditTestimonial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditTestimonial.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListOfTestimonials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListOfTestimonials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/testimonialReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/testimonialReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
       <workItem from="1606114454240" duration="5765000" />
       <workItem from="1606220554788" duration="366000" />
       <workItem from="1606221393500" duration="3669000" />
-      <workItem from="1606230856630" duration="4911000" />
+      <workItem from="1606230856630" duration="5909000" />
     </task>
     <servers />
   </component>
