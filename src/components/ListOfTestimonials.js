@@ -1,11 +1,9 @@
-import React,{Component,useContext,useReducer,useEffect,useRef} from "react"
+import React,{Component,useContext,useReducer,useEffect,useRef,useState} from "react"
 import testimonialsStore from "../store/testimonialStore";
-import testimonialReducer from "../reducers/testimonialReducer";
 import * as actions from "../actions/actionTypes"
 import * as testimonialActions from "../actions/testimonialActions"
-import {Redirect} from "react-router";
 import {Link} from "react-router-dom";
-import EditTestimonial from "./EditTestimonial";
+import {useDispatch, useSelector} from "react-redux";
 
 
 const Context = React.createContext();
@@ -22,29 +20,15 @@ let testimonialBody = {
 
 
 function ListOfTestimonials () {
+    const testimonialState = () =>{
+        return testimonialsStore.getState();
+    }
 
-    const [state,dispatch] = useReducer(testimonialReducer,testimonialsStore.getState())
+    // console.log(typeof test)
 
-    const didRun = useRef(false)
-
-    useEffect(()=> {
-        if(!didRun.current){
-            const dataFromLocalStorage = localStorage.getItem("data")
-            dispatch({
-                type: actions.RESET_TESTIMONIAL_STORAGE,
-                payload: JSON.parse(dataFromLocalStorage)
-            })
-            dispatch({
-                type: actions.TESTIMONIAL_VIEWS
-            })
-
-            didRun.current = true
-        }
-    })
-
-    useEffect( () => {
-        localStorage.setItem("data", JSON.stringify(state))
-    },[state])
+    const myState = useSelector(testimonialState);
+    // const myState = (testimonialsStore.getState())
+    const dispatch = useDispatch()
 
     return(
         <Context.Provider value={dispatch}>
@@ -70,7 +54,7 @@ function ListOfTestimonials () {
                     <h4>List of new testimonials</h4>
                     <br/>
                     <div className="row">
-                    <ListingTestimonials testimonials={state} />
+                    <ListingTestimonials testimonials={myState} />
                     </div>
                 </div>
             </div>

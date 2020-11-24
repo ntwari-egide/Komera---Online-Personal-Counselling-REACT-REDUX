@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e037829b-3731-405c-8eaa-4185fd2e092f" name="Default Changelist" comment="Fit solved the issue 'Error: Could not find &quot;store&quot; in the context of &quot;Connect(AddTestimony)&quot;. Either wrap the root component in a &lt;Provider&gt;'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditTestimonial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditTestimonial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddTestimony.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddTestimony.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListOfTestimonials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListOfTestimonials.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/testimonialReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/testimonialReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +34,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\ntwari egide documents\react learning\Komera---Online-Personal-Counselling\src\components" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -55,6 +65,9 @@
       <workItem from="1606064384818" duration="9555000" />
       <workItem from="1606103783622" duration="8257000" />
       <workItem from="1606114454240" duration="5765000" />
+      <workItem from="1606220554788" duration="366000" />
+      <workItem from="1606221393500" duration="3669000" />
+      <workItem from="1606230856630" duration="3099000" />
     </task>
     <servers />
   </component>
