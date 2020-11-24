@@ -69,10 +69,6 @@ function ListingTestimonials({testimonials}) {
         )
 }
 
-function GoEditComponent(){
-    console.log('clicked edit')
-    return <Link to="/edit-testimony" />
-}
 
 function Testimonial({...testimonial}){
     // console.log(testimonial)

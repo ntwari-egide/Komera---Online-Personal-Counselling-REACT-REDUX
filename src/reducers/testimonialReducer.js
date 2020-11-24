@@ -72,7 +72,7 @@ export default function testimonialReducer(state = initialState,action){
                     return {
                         id: testimonials.id,
                         date: testimonials.date,
-                        OwnerFullName: testimonials.OwnerFullName,
+                        OwnerFullName: action.payload.OwnerFullName,
                         OwnerId: testimonials.OwnerId,
                         testimonialType: action.payload.testimonialType,
                         testimonialTitle: action.payload.testimonialTitle,
@@ -83,7 +83,7 @@ export default function testimonialReducer(state = initialState,action){
                     }
                 }
 
-                return state
+                return testimonials
             })
             break
         case actions.DELETE_TESTIMONIAL:

@@ -35,12 +35,12 @@ function AddTestimony(){
                         <div className="form-group">
                             <label htmlFor="exampleFormControlInput1">Full names</label>
                             <input type="text" name="OwnerFullName" onChange={changeStateValue} value={state.OwnerFullName} className="form-control" id="exampleFormControlInput1"
-                                   placeholder="Enter your full name" />
+                                   placeholder="Enter your full name"  required="Please fill this input "/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleFormControlInput1">Testimony title</label>
                             <input type="text" name="testimonialTitle" onChange={changeStateValue} value={state.testimonialTitle} className="form-control" id="exampleFormControlInput1"
-                                   placeholder="Enter title" />
+                                   placeholder="Enter title" required="Please fill this input "  />
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleFormControlInput1">Testimony</label>
@@ -49,7 +49,7 @@ function AddTestimony(){
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleFormControlSelect1">Example select</label>
-                            <select value={state.testimonialType} name="testimonialType" onChange={changeStateValue} className="form-control" id="exampleFormControlSelect1">
+                            <select value={state.testimonialType} name="testimonialType" onChange={changeStateValue} className="form-control" id="exampleFormControlSelect1" required="Please fill this input ">
                                 <option value="">choose type</option>
                                 <option value="illness">illness</option>
                                 <option value="admissions">admissions</option>
