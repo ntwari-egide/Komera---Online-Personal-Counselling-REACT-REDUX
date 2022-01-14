@@ -46,7 +46,9 @@ function ListOfTestimonials () {
             </div>
 
             <div>
-                <button type="button" className="btn btn-primary" onClick={ () =>
+                <button type="button" className="btn btn-primary" style={{
+                    marginLeft: '5vw'
+                }} onClick={ () =>
                         dispatch(testimonialActions.addTestimonial(testimonialBody))
                 }>Add testimonial</button>
                 <div className="container-fluid testimonies">
@@ -83,10 +85,10 @@ function Testimonial({...testimonial}){
             <p className="text-success font-weight-bold">{testimonial.views} views</p>
             <p><span className="text-success align-left">{testimonial.likes} likes </span> <span className="text-danger align-right">{testimonial.dislikes} dislikes</span></p>
             <button type="button" className="btn btn-outline-primary" onClick={()=> dispatch({type: actions.LIKE_TESTIMONIAL,payload: {id: testimonial.id,OwnerId: testimonial.OwnerId}})}>like</button>
-            <button type="button" className="btn btn-outline-primary" onClick={()=> dispatch({type: actions.DISLIKE_TESTIMONIAL,payload: {id: testimonial.id,OwnerId: testimonial.OwnerId}})}>dislike</button>
+            <button style={{marginLeft: '2vw'}} type="button" className="btn btn-outline-primary" onClick={()=> dispatch({type: actions.DISLIKE_TESTIMONIAL,payload: {id: testimonial.id,OwnerId: testimonial.OwnerId}})}>dislike</button>
             <br/><br/><br/>
             <Link className="btn btn-info" to={{pathname: "/edit-testimony",state: testimonial}} >Edit</Link>
-            <button type="button" className="btn btn-danger" onClick={() => dispatch({type: actions.DELETE_TESTIMONIAL,payload: {id: testimonial.id}})}>Delete</button>
+            <button style={{marginLeft: '2vw'}} type="button" className="btn btn-danger" onClick={() => dispatch({type: actions.DELETE_TESTIMONIAL,payload: {id: testimonial.id}})}>Delete</button>
         </div>
     )
 }
