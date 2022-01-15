@@ -46,12 +46,18 @@ function ListOfTestimonials () {
             </div>
 
             <div>
-                <button type="button" className="btn btn-primary" style={{
-                    marginLeft: '5vw'
-                }} onClick={ () =>
-                        dispatch(testimonialActions.addTestimonial(testimonialBody))
-                }>Add testimonial</button>
-                <div className="container-fluid testimonies">
+                <div className="row">
+                    <button type="button" className="btn btn-primary" style={{
+                        marginLeft: '6vw'
+                    }} onClick={ () =>
+                            dispatch(testimonialActions.addTestimonial(testimonialBody))
+                    }>Add Defined testimonial</button>
+                    
+                    <Link to="/addtestimony" className="btn btn-info" style={{
+                        marginLeft: '5vw'
+                    }}>Add testimony</Link>
+                </div>
+                <div className="container-fluid testimonies mt-6">
                     <h2>Testimonies</h2>
                     <h4>List of new testimonials</h4>
                     <br/>
