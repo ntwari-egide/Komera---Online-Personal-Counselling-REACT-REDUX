@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "jtest": "jest ./__tests__",
-    "jtest:watch": "npm jtest -- --watch"
+    "jtest:watch": "yarn jtest -- --watch"
   },
   "eslintConfig": {
     "extends": [
