@@ -1,6 +1,7 @@
 import testimonialsStore from "../../src/store/testimonialStore";
-import {getAllTestimonials} from '../../src/actions/testimonialActions';
+import {getAllTestimonials, updateTestimonial} from '../../src/actions/testimonialActions';
 
+// update,view,dislike
 
 describe('testmonial store', () => {
 
@@ -34,4 +35,26 @@ describe('testmonial store', () => {
         
         expect(testimonialsStore.getState()).toEqual(initialState)
     })
+
+
+    it('Update State test', async () => {
+        // Response body sample
+        const stateToUpdate = {
+            id: 2,
+            OwnerFullName: "mugisha jules",
+            OwnerId: 1,
+            testimonialType: "illiness",
+            testimonialTitle: "30 Years On Bed",
+            testimonialBody: "Rwanda Hospital Medical Center regularly receives letters of thanks from former patients or their family members for the high level of care we provide throughout our facility.",
+            views: 1,
+            likes: 0,
+            dislikes: 0
+        }
+        
+        await testimonialsStore.dispatch(updateTestimonial(stateToUpdate))
+        expect(testimonialsStore.getState()[1]).toEqual(stateToUpdate)
+    })
+
+    
+    
 })
