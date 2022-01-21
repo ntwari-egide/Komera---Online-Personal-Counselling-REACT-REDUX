@@ -1,6 +1,5 @@
-import React,{Component,useContext,useReducer,useEffect,useRef,useState} from "react"
+import React from "react"
 import testimonialsStore from "../store/testimonialStore";
-import * as actions from "../actions/actionTypes"
 import * as testimonialActions from "../actions/testimonialActions"
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";

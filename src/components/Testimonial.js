@@ -1,4 +1,4 @@
-import React,{Component,useContext,useReducer,useEffect,useRef,useState} from "react"
+import React,{useContext} from "react"
 import * as actions from "../actions/actionTypes"
 import {Link} from "react-router-dom";
 export default function Testimonial({...testimonial}){
