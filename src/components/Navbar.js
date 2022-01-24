@@ -1,5 +1,7 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
+import React from "react"
+import {Link} from "react-router-dom";
 
 function NavbarComponent() {
   const [searchValue, setSearchValue] = useState("");

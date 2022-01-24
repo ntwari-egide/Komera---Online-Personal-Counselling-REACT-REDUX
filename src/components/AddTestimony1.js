@@ -1,4 +1,4 @@
-import React,{Component,useContext} from "react"
+import React,{Component} from "react"
 import testimonialsStore from "../store/testimonialStore";
 import * as testimonialAction from "../actions/testimonialActions"
 import {connect} from "react-redux";
