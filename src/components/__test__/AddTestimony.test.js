@@ -44,7 +44,7 @@ describe('AddTestimony', ()=>{
     const testmonyElement = screen.getByPlaceholderText(/Enter your full name/i);
     fireEvent.change(testmonyElement, { target:{value:"disoder must be avoided this is my testmony"} })
     const postButtonElement = screen.getByRole("button",{name:/Post Testimony/i})
-    fireEvent.click(postButtonElement)
+    fireEvent.click(postButtonElement);
     //to be continued
   })
 })
