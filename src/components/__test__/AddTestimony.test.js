@@ -4,6 +4,7 @@ import {Provider} from "react-redux";
 import testimonialsStore from "../../store/testimonialStore";
 import React from "react";
 import {BrowserRouter as Router} from "react-router-dom"
+import ListOfTestimonials from '../ListOfTestimonials';
 
 describe('AddTestimony', ()=>{
 
@@ -45,6 +46,9 @@ describe('AddTestimony', ()=>{
     fireEvent.change(testmonyElement, { target:{value:"disoder must be avoided this is my testmony"} })
     const postButtonElement = screen.getByRole("button",{name:/Post Testimony/i})
     fireEvent.click(postButtonElement);
-    //to be continued
+
+    const headingElement = screen.getByRole('heading', {name:/Add testimony/i}); 
+    
+    expect(headingElement).toHaveClass("testmony_successfull")
   })
 })

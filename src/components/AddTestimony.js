@@ -24,18 +24,20 @@ function AddTestimony(){
             [e.target.name ]: e.target.value
         })
     }
-
+    const [successful, setSuccessful]= useState(false);
     const submitForm = (e) =>{
         dispatch(testimonialActions.addTestimonial(state))
-        alert("You added new testimony ")
+        setSuccessful(true);
+        // alert("You added new testimony ")
         history.push("/")
         e.preventDefault()
     }
 
         return (
             <div>
+                 className={`todo-item `} 
                 <div className="card">
-                    <h2 className="align-center  font-weight-bold">Add Testimony</h2><br/><br/>
+                    <h2 className={`align-center  font-weight-bold ${successful && "testmony_successfull"}`} >Add Testimony</h2><br/><br/>
                     <form onSubmit={submitForm}>
                         <div className="form-group">
                             <label htmlFor="exampleFormControlInput1">Full names</label>
