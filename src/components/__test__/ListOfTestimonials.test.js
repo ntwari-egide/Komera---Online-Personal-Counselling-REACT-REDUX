@@ -20,5 +20,4 @@ describe('ListOfTestimonials', () => {
         expect(buttonElement).toBeInTheDocument();
         expect(divElement.length).toBeGreaterThan(2);
       });
-      
 });

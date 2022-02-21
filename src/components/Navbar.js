@@ -41,7 +41,7 @@ function NavbarComponent () {
                         </div>
                         <button type="submit" className="btn btn-default">Submit</button>
                     </form>
-                    <ul className="nav navbar-nav navbar-right">
+                    {/* <ul className="nav navbar-nav navbar-right">
                         <li><a href="#">Link</a></li>
                         <li className="dropdown">
                             <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -54,7 +54,7 @@ function NavbarComponent () {
                                 <li><a href="#">Separated link</a></li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </nav>

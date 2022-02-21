@@ -6,14 +6,21 @@ import React from "react";
 import {BrowserRouter as Router} from "react-router-dom"
 import ListOfTestimonials from '../ListOfTestimonials';
 
+
+const   MockAddTestimony = () =>{
+  return(
+    <Provider store={testimonialsStore}  > 
+    <Router>
+           <AddTestimony />
+           </Router>
+         </Provider>
+  )
+}
+
 describe('AddTestimony', ()=>{
 
   test('should render input testmony', () => {
-    render(<Provider store={testimonialsStore}  > 
-       <Router>
-              <AddTestimony />
-              </Router>
-            </Provider>);
+    render(<MockAddTestimony/>);
     const headingElement = screen.getByRole('heading', {name:/Add testimony/i}); 
     const placeholderElement = screen.getByPlaceholderText(/Enter your full name/i);
     expect(headingElement).toBeInTheDocument();
@@ -22,22 +29,14 @@ describe('AddTestimony', ()=>{
 
 
   test('should be able to type in input', () => {
-    render(<Provider store={testimonialsStore}  > 
-       <Router>
-              <AddTestimony />
-              </Router>
-            </Provider>);
+    render(<MockAddTestimony/>);
     const inputElements = screen.getByPlaceholderText(/Enter your full name/i);
     fireEvent.change(inputElements, { target:{value:"Gahamanyi yvette"} })
         expect(inputElements.value).toBe("Gahamanyi yvette");
   })
 
   test('should add new testimony when "post testumony" clicked', () => {
-    render(<Provider store={testimonialsStore}  > 
-       <Router>
-              <AddTestimony />
-              </Router>
-            </Provider>);
+    render(<MockAddTestimony/>);
     const fullNameElement = screen.getByPlaceholderText(/Enter your full name/i);
     fireEvent.change(fullNameElement, { target:{value:"Gahamanyi yvette"} })
     const titleElement = screen.getByPlaceholderText(/Enter your full name/i);
